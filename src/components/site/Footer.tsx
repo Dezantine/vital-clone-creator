@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { PHONE_DISPLAY, PHONE_HREF, SMS_HREF, WHATSAPP_HREF } from "./data";
 
 export function Footer() {
   return (
@@ -60,8 +61,33 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="text-sm font-semibold">Stay in the loop</h3>
+          <h3 className="text-sm font-semibold">Talk to us</h3>
           <p className="mt-3 text-sm text-muted-foreground">
+            Call or text{" "}
+            <a href={PHONE_HREF} className="font-medium text-foreground hover:underline">
+              {PHONE_DISPLAY}
+            </a>
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2 text-sm">
+            <a
+              href={PHONE_HREF}
+              className="rounded-lg bg-primary px-3 py-2 font-medium text-primary-foreground"
+            >
+              Call
+            </a>
+            <a href={SMS_HREF} className="rounded-lg border border-border px-3 py-2">
+              Text
+            </a>
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg border border-border px-3 py-2"
+            >
+              WhatsApp
+            </a>
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground">
             Drop notices and batch releases, roughly twice a month.
           </p>
           <form

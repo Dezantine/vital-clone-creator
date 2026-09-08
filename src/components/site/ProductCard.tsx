@@ -1,6 +1,10 @@
+import { useState } from "react";
 import type { Product } from "./data";
+import { useCart } from "./cart";
 
 export function ProductCard({ product }: { product: Product }) {
+  const { add } = useCart();
+  const [added, setAdded] = useState(false);
   const off =
     product.was && product.was > product.price
       ? Math.round(((product.was - product.price) / product.was) * 100)
@@ -44,6 +48,7 @@ export function ProductCard({ product }: { product: Product }) {
             </span>
           ))}
         </div>
+        <p className="text-sm leading-relaxed text-muted-foreground">{product.description}</p>
         <div className="mt-auto flex items-center justify-between pt-3">
           <p className="font-display text-lg font-semibold">
             ${product.price.toFixed(2)}
@@ -53,8 +58,15 @@ export function ProductCard({ product }: { product: Product }) {
               </span>
             )}
           </p>
-          <button className="rounded-lg border border-accent/40 px-3 py-1.5 text-xs font-medium text-accent transition hover:bg-accent hover:text-accent-foreground">
-            Add to bag
+          <button
+            onClick={() => {
+              add(product.id);
+              setAdded(true);
+              setTimeout(() => setAdded(false), 1200);
+            }}
+            className="rounded-lg border border-accent/40 px-3 py-1.5 text-xs font-medium text-accent transition hover:bg-accent hover:text-accent-foreground"
+          >
+            {added ? "Added ✓" : "Add to bag"}
           </button>
         </div>
       </div>

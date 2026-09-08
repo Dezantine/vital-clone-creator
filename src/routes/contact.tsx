@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Layout } from "@/components/site/Layout";
+import { PHONE_DISPLAY, PHONE_HREF, SMS_HREF, WHATSAPP_HREF } from "@/components/site/data";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -36,6 +37,14 @@ function Contact() {
           </p>
           <dl className="mt-8 space-y-4 text-sm">
             <div>
+              <dt className="text-muted-foreground">Phone / text</dt>
+              <dd>
+                <a href={PHONE_HREF} className="text-accent hover:underline">
+                  {PHONE_DISPLAY}
+                </a>
+              </dd>
+            </div>
+            <div>
               <dt className="text-muted-foreground">Support</dt>
               <dd>hello@greenwell.example</dd>
             </div>
@@ -48,8 +57,27 @@ function Contact() {
               <dd>Mon–Sat, 9am – 7pm</dd>
             </div>
           </dl>
+          <div className="mt-6 flex flex-wrap gap-2 text-sm">
+            <a
+              href={PHONE_HREF}
+              className="rounded-xl bg-primary px-4 py-2.5 font-medium text-primary-foreground"
+            >
+              Call {PHONE_DISPLAY}
+            </a>
+            <a href={SMS_HREF} className="rounded-xl border border-border px-4 py-2.5">
+              Send a text
+            </a>
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl border border-border px-4 py-2.5"
+            >
+              WhatsApp
+            </a>
+          </div>
           <p className="mt-6 text-xs text-muted-foreground">
-            These contact details are placeholders — send me your real ones and I&rsquo;ll swap
+            The email addresses are still placeholders — send me the real ones and I&rsquo;ll swap
             them in.
           </p>
         </div>
