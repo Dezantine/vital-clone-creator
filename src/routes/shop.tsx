@@ -26,6 +26,7 @@ export const Route = createFileRoute("/shop")({
 function Shop() {
   const [filter, setFilter] = useState("All");
   const filters = ["All", ...categories.map((c) => c.name)];
+  const shown = filter === "All" ? products : products.filter((p) => p.category === filter);
 
   return (
     <Layout>
@@ -54,7 +55,7 @@ function Shop() {
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((p) => (
+          {shown.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
         </div>
