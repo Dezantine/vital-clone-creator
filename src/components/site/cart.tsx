@@ -15,7 +15,16 @@ type CartValue = {
   clear: () => void;
 };
 
-const CartContext = createContext<CartValue | null>(null);
+const CartContext = createContext<CartValue>({
+  lines: [],
+  items: [],
+  count: 0,
+  subtotal: 0,
+  add: () => {},
+  setQty: () => {},
+  remove: () => {},
+  clear: () => {},
+});
 const KEY = "greenwell-cart";
 
 export function CartProvider({ children }: { children: ReactNode }) {
@@ -81,7 +90,5 @@ export function CartProvider({ children }: { children: ReactNode }) {
 }
 
 export function useCart() {
-  const ctx = useContext(CartContext);
-  if (!ctx) throw new Error("useCart must be used inside CartProvider");
-  return ctx;
+  return useContext(CartContext);
 }

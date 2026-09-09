@@ -61,10 +61,8 @@ function Home() {
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
             <span className="rounded-full bg-primary px-3 py-1.5 font-medium text-primary-foreground">
-              Save 10% sitewide
+              Shop 10 products
             </span>
-            <span>1,000+ products</span>
-            <span className="hidden sm:inline">·</span>
             <span>Free discreet standard delivery</span>
           </div>
         </div>
@@ -76,7 +74,7 @@ function Home() {
             <p className="eyebrow">Categories</p>
             <h2 className="mt-2 text-3xl font-semibold sm:text-4xl">Shop by category</h2>
             <p className="mt-2 text-muted-foreground">
-              Eight curated ranges, one standard of quality.
+              Six curated ranges, one standard of quality.
             </p>
           </div>
           <Link to="/shop" className="text-sm text-accent hover:underline">
