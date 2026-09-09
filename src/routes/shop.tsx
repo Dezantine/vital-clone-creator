@@ -34,8 +34,7 @@ function Shop() {
         <p className="eyebrow">The collection</p>
         <h1 className="mt-2 text-4xl font-semibold">Shop all products</h1>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          {products.length} in-stock items from this month&rsquo;s releases. Prices include the
-          sitewide 10% discount at checkout.
+          {products.length} in-stock items, ready for discreet delivery or pickup.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-2">
