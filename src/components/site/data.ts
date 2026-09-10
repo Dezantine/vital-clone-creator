@@ -8,6 +8,25 @@ import bong from "@/assets/p-bong.jpg";
 import grinder from "@/assets/p-grinder.jpg";
 import papers from "@/assets/p-papers.jpg";
 import jar from "@/assets/p-jar.jpg";
+import berryGummies from "@/assets/berry-gummies.jpg.asset.json";
+import gummies30 from "@/assets/gummies-30.jpg.asset.json";
+import tinctureFull from "@/assets/tincture-full.jpg.asset.json";
+import hempPapers from "@/assets/hemp-papers.jpg.asset.json";
+import vapeCartridge from "@/assets/vape-cartridge.jpg.asset.json";
+import hempFlower from "@/assets/hemp-flower.jpg.asset.json";
+import hempPrerolls from "@/assets/hemp-prerolls.jpg.asset.json";
+import balmPeppermint from "@/assets/p-balm-peppermint.jpg";
+import massageOil from "@/assets/p-massage-oil.jpg";
+import softgels from "@/assets/p-softgels.jpg";
+import rollOn from "@/assets/p-rollon.jpg";
+import bathSoak from "@/assets/p-bath-soak.jpg";
+import faceSerum from "@/assets/p-face-serum.jpg";
+import cbdDrink from "@/assets/p-cbd-drink.jpg";
+import glassPipe from "@/assets/p-glass-pipe.jpg";
+import rollingTray from "@/assets/p-rolling-tray.jpg";
+import preTubes from "@/assets/p-tubes.jpg";
+import storageCase from "@/assets/p-case.jpg";
+import hygrometer from "@/assets/p-hygrometer.jpg";
 
 export type Product = {
   id: string;
@@ -30,10 +49,14 @@ export const WHATSAPP_HREF = "https://wa.me/14376000915";
 export const categories = [
   { name: "Flower", count: 2, image: flowerLarge.url },
   { name: "CBD Flower", count: 1, image: cbdFlower.url },
+  { name: "Hemp", count: 2, image: hempFlower.url },
   { name: "Pre-Rolls", count: 1, image: preroll.url },
-  { name: "CBD Oil", count: 1, image: cbdOil.url },
-  { name: "Topicals", count: 1, image: balm.url },
-  { name: "Accessories", count: 4, image: bong },
+  { name: "Edibles", count: 2, image: berryGummies.url },
+  { name: "CBD Oil", count: 3, image: cbdOil.url },
+  { name: "Topicals", count: 6, image: balm.url },
+  { name: "Vapes", count: 1, image: vapeCartridge.url },
+  { name: "Drinks", count: 1, image: cbdDrink },
+  { name: "Accessories", count: 10, image: bong },
 ];
 
 export const effects = [
@@ -158,5 +181,209 @@ export const products: Product[] = [
     description:
       "Odor-resistant, airtight storage container designed to help keep dry cannabis properly stored and fresh.",
     price: 20,
+  },
+  {
+    id: "cbd-berry-gummies",
+    name: "CBD Berry Gummies",
+    brand: "Greenwell",
+    category: "Edibles",
+    image: berryGummies.url,
+    tags: ["Berry", "Resealable", "THC-free option"],
+    description:
+      "Fruit-flavored CBD gummies packaged in a premium resealable container.",
+    price: 34.99,
+  },
+  {
+    id: "full-spectrum-cbd-tincture",
+    name: "Full-Spectrum CBD Tincture",
+    brand: "Greenwell",
+    category: "CBD Oil",
+    image: tinctureFull.url,
+    tags: ["30 ml", "Full-spectrum", "1500 mg"],
+    description: "30ml hemp-derived CBD oil in a glass dropper bottle.",
+    price: 44.99,
+  },
+  {
+    id: "peppermint-cbd-balm",
+    name: "Peppermint CBD Balm",
+    brand: "Greenwell",
+    category: "Topicals",
+    image: balmPeppermint,
+    tags: ["Peppermint", "CBD-rich", "External use"],
+    description: "Premium topical balm featuring CBD and botanical ingredients.",
+    price: 32.99,
+  },
+  {
+    id: "cbd-massage-oil",
+    name: "CBD Massage Oil",
+    brand: "Greenwell",
+    category: "Topicals",
+    image: massageOil,
+    tags: ["Hemp-derived", "Massage", "External use"],
+    description: "Hemp-derived CBD oil formulated as a topical massage product.",
+    price: 39.99,
+  },
+  {
+    id: "cbd-softgels",
+    name: "CBD Softgels",
+    brand: "Greenwell",
+    category: "CBD Oil",
+    image: softgels,
+    tags: ["Pre-measured", "Capsules", "Bottle"],
+    description: "Pre-measured CBD capsules in a convenient bottle.",
+    price: 42.99,
+  },
+  {
+    id: "cbd-roll-on",
+    name: "CBD Roll-On",
+    brand: "Greenwell",
+    category: "Topicals",
+    image: rollOn,
+    tags: ["Portable", "Roll-on", "External use"],
+    description:
+      "Portable topical roll-on designed for convenient external application.",
+    price: 29.99,
+  },
+  {
+    id: "cbd-bath-soak",
+    name: "CBD Bath Soak",
+    brand: "Greenwell",
+    category: "Topicals",
+    image: bathSoak,
+    tags: ["Hemp-derived", "Botanical", "Bath"],
+    description:
+      "Bath product combining hemp-derived ingredients with aromatic botanicals.",
+    price: 27.99,
+  },
+  {
+    id: "cbd-face-serum",
+    name: "CBD Face Serum",
+    brand: "Greenwell",
+    category: "Topicals",
+    image: faceSerum,
+    tags: ["Skincare", "Hemp-derived", "Premium"],
+    description:
+      "Premium skincare product featuring hemp-derived CBD ingredients.",
+    price: 35.99,
+  },
+  {
+    id: "cbd-drink",
+    name: "CBD Drink",
+    brand: "Greenwell",
+    category: "Drinks",
+    image: cbdDrink,
+    tags: ["Ready-to-drink", "Hemp-derived", "355 ml"],
+    description:
+      "Ready-to-drink hemp-derived cannabinoid beverage, where legally permitted.",
+    price: 7.99,
+  },
+  {
+    id: "cbd-vape-cartridge",
+    name: "CBD Vape Cartridge",
+    brand: "Greenwell",
+    category: "Vapes",
+    image: vapeCartridge.url,
+    tags: ["Hemp-derived", "510 thread", "1 g"],
+    description:
+      "Hemp-derived CBD cartridge designed for compatible vaporizer hardware, where legally permitted.",
+    price: 29.99,
+  },
+  {
+    id: "hemp-flower-3-5g",
+    name: "Hemp Flower — 3.5 g",
+    brand: "Greenwell",
+    category: "Hemp",
+    image: hempFlower.url,
+    tags: ["3.5 g", "Hemp", "Resealable pouch"],
+    description: "Aromatic hemp flower packaged in a premium resealable pouch.",
+    price: 29.99,
+  },
+  {
+    id: "hemp-prerolls-5-pack",
+    name: "Hemp Pre-Rolls — 5 Pack",
+    brand: "Greenwell",
+    category: "Hemp",
+    image: hempPrerolls.url,
+    tags: ["5 pack", "Hemp flower", "Ready to use"],
+    description: "Convenient pre-roll pack made with hemp flower.",
+    price: 34.99,
+  },
+  {
+    id: "premium-glass-pipe",
+    name: "Premium Glass Pipe",
+    brand: "Greenwell",
+    category: "Accessories",
+    image: glassPipe,
+    tags: ["Glass", "Compact", "Minimalist"],
+    description:
+      "Compact glass smoking accessory featuring a sleek, minimalist design.",
+    price: 25,
+  },
+  {
+    id: "rolling-tray",
+    name: "Rolling Tray",
+    brand: "Greenwell",
+    category: "Accessories",
+    image: rollingTray,
+    tags: ["Metal", "Durable", "Organized"],
+    description:
+      "Durable preparation tray designed to keep rolling materials organized and contained.",
+    price: 20,
+  },
+  {
+    id: "hemp-rolling-papers-3-pack",
+    name: "Hemp Rolling Papers — 3 Pack",
+    brand: "Greenwell",
+    category: "Accessories",
+    image: hempPapers.url,
+    tags: ["Hemp papers", "3 pack", "Smooth burn"],
+    description:
+      "Smooth-burning hemp papers packaged in a convenient multi-pack.",
+    price: 8,
+  },
+  {
+    id: "preroll-storage-tube-5-pack",
+    name: "Pre-Roll Storage Tube — 5 Pack",
+    brand: "Greenwell",
+    category: "Accessories",
+    image: preTubes,
+    tags: ["5 pack", "Protective", "Compact"],
+    description:
+      "Compact tubes designed to protect pre-rolls during storage and transport.",
+    price: 12,
+  },
+  {
+    id: "odor-resistant-storage-case",
+    name: "Odor-Resistant Storage Case",
+    brand: "Greenwell",
+    category: "Accessories",
+    image: storageCase,
+    tags: ["Odor-resistant", "Portable", "Discreet"],
+    description:
+      "Portable storage case designed to provide discreet organization and protection.",
+    price: 30,
+  },
+  {
+    id: "digital-storage-hygrometer",
+    name: "Digital Storage Hygrometer",
+    brand: "Greenwell",
+    category: "Accessories",
+    image: hygrometer,
+    tags: ["Digital", "Humidity", "Temperature"],
+    description:
+      "Small digital device for monitoring temperature and humidity inside storage containers.",
+    price: 15,
+  },
+  {
+    id: "cbd-gummies-30-count",
+    name: "CBD Gummies — 30 Count",
+    brand: "Greenwell",
+    category: "Edibles",
+    image: gummies30.url,
+    tags: ["30 count", "Fruit flavors", "Portioned"],
+    description:
+      "Convenient, individually portioned CBD gummies with a fruit-inspired flavor profile.",
+    price: 35,
+    badge: "New",
   },
 ];
