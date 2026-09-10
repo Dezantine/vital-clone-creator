@@ -8,6 +8,25 @@ import bong from "@/assets/p-bong.jpg";
 import grinder from "@/assets/p-grinder.jpg";
 import papers from "@/assets/p-papers.jpg";
 import jar from "@/assets/p-jar.jpg";
+import berryGummies from "@/assets/berry-gummies.jpg.asset.json";
+import gummies30 from "@/assets/gummies-30.jpg.asset.json";
+import tinctureFull from "@/assets/tincture-full.jpg.asset.json";
+import hempPapers from "@/assets/hemp-papers.jpg.asset.json";
+import vapeCartridge from "@/assets/vape-cartridge.jpg.asset.json";
+import hempFlower from "@/assets/hemp-flower.jpg.asset.json";
+import hempPrerolls from "@/assets/hemp-prerolls.jpg.asset.json";
+import balmPeppermint from "@/assets/p-balm-peppermint.jpg";
+import massageOil from "@/assets/p-massage-oil.jpg";
+import softgels from "@/assets/p-softgels.jpg";
+import rollOn from "@/assets/p-rollon.jpg";
+import bathSoak from "@/assets/p-bath-soak.jpg";
+import faceSerum from "@/assets/p-face-serum.jpg";
+import cbdDrink from "@/assets/p-cbd-drink.jpg";
+import glassPipe from "@/assets/p-glass-pipe.jpg";
+import rollingTray from "@/assets/p-rolling-tray.jpg";
+import preTubes from "@/assets/p-tubes.jpg";
+import storageCase from "@/assets/p-case.jpg";
+import hygrometer from "@/assets/p-hygrometer.jpg";
 
 export type Product = {
   id: string;
@@ -30,19 +49,14 @@ export const WHATSAPP_HREF = "https://wa.me/14376000915";
 export const categories = [
   { name: "Flower", count: 2, image: flowerLarge.url },
   { name: "CBD Flower", count: 1, image: cbdFlower.url },
+  { name: "Hemp", count: 2, image: hempFlower.url },
   { name: "Pre-Rolls", count: 1, image: preroll.url },
-  { name: "CBD Oil", count: 1, image: cbdOil.url },
-  { name: "Topicals", count: 1, image: balm.url },
-  { name: "Accessories", count: 4, image: bong },
-];
-
-export const effects = [
-  { name: "Relaxed", count: 4 },
-  { name: "Euphoric", count: 3 },
-  { name: "Uplifted", count: 2 },
-  { name: "Focused", count: 2 },
-  { name: "Sleepy", count: 2 },
-  { name: "Body relief", count: 2 },
+  { name: "Edibles", count: 2, image: berryGummies.url },
+  { name: "CBD Oil", count: 3, image: cbdOil.url },
+  { name: "Topicals", count: 6, image: balm.url },
+  { name: "Vapes", count: 1, image: vapeCartridge.url },
+  { name: "Drinks", count: 1, image: cbdDrink },
+  { name: "Accessories", count: 10, image: bong },
 ];
 
 export const products: Product[] = [
